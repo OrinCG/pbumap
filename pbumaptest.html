@@ -6,14 +6,14 @@
     <script type="module" src="./index.js"></script>
 </head>
 <body>
-<div id = "map" style = "width: 30em; height: 50em"></div>
+<div id = "map" style = "width: 100%; height: 100%"></div>
 <script>
     function initMap(){
-        let uk_mid = {lat: 54.5074, lng: -3};
+        let uk_mid = {lat: 54.0074, lng: 0.5};
         let universities = [];
         let markers = [];
         let map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 5.5,
+            zoom: 6.2,
             center: uk_mid,
             mapId : 'b83b8e3d56562a7a'
         });
@@ -32,8 +32,9 @@
                             '</style>'+
                             '<div id="content">'+
                             '<h1 id=title class="centre">'+name+'</h1>'+
-                            '<img src="'+image+'" alt="University Image" width="256" height="144" class="centre">'+
-                            '<center><p>'+desc+'</p></center>'+
+                                            '<center><p>'+desc+'</p></center>'+
+
+                            '<iframe src="'+image+'" alt="University Image" width="256" height="144" class="centre">'+
                             '</div>'
            let markerIcon = hasWin ? "https://cdn-icons-png.flaticon.com/512/1663/1663127.png" : "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png";
            let marker = new google.maps.Marker({
